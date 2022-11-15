@@ -1,7 +1,6 @@
 
 const express = require('express')
 const app = express()
-const port = process.env.PORT || 3000
 
 app.get('/headers', (req, res) => {
     res.type('text/plain')
@@ -10,7 +9,6 @@ app.get('/headers', (req, res) => {
     res.send(headers.join('\n'))
    })
 
-   app.listen(port, () => console.log(
-    `Express started on http://localhost:${port}; ` +
-    `press Ctrl-C to terminate.`))
+   const port = process.env.PORT || 3000
+   app.listen(port, () => console.log( `\nnavigate to http://localhost:${port}/headers\n`))
    
