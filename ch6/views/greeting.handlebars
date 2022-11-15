@@ -1,33 +1,33 @@
 <style>
-    dt {
+    dt{
         font-weight: bold;
-        padding-top: 1em;
+        padding-top: 1rem;
     }
 </style>
-<h2>Greeting</h2>
+<h2>greeting</h2>
 <dl>
-    
     <dt>Message:</dt>
     <dd>
         {{message}}
-        <br />(modify 04-views-with-content.js to change)
+        <br/ >(modify 04-views-with-content.js to change)
     </dd>
 
     <dt>Style:</dt>
     <dd>
         {{style}}
-        <br />(edit URL to change; for example, <a href="/greeting/?style=fancy">/greeting/?style=fancy</a>)
+        <br />(edit url to change; for example,<a href="/greeting/?style=fancy">/greeting/?style=fancy</a>)
     </dd>
 
-    <dt>User ID (from cookie):</dt>
+    <dt>User id (from cookie): </dt>
     <dd>
         {{userid}}
-        <br />(click <a href="/set-random-userid">here</a> to change randomly)
+        <br />(click <a href="/set-random-userid">here</a>to change randomly)
     </dd>
 
-    <dt>Usename (from session):</dt>
+    <dt>User name (from session):</dt>
     <dd>
-        {{Usename}}
+        {{username}}
         <br />(click <a href="/set-random-username">here</a> to change randomly)
     </dd>
+    
 </dl>
