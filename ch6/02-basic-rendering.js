@@ -1,5 +1,5 @@
 const express = require('express')
-const expressHandlebars = require('express-handlebars')
+const expressHandlebars = require('express-handlebars').engine
 const app = express()
 
 app.engine('handlebars', expressHandlebars({ defautLayout: 'main' }))

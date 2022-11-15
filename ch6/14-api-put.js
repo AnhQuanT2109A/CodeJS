@@ -7,7 +7,7 @@ const tours = [
    ]
 
 app.get('/api/tours', (req, res) => {
-    const toursXml = '<?xml version="1.0"?><tour>' +
+    const toursXml = '<?xml version="1.0"?><tours>' +
     tours.map(p =>
         `<tour price="${p.price}" id="${p.id}">${p.name}<tours>`
         ).join('') + '</tours>'
@@ -22,7 +22,7 @@ app.get('/api/tours', (req, res) => {
             })
 })
 
-pp.get('*', (req, res) => res.send('Check out "<a href="/api/tours">/api/tours</a>"!'))
+app.get('*', (req, res) => res.send('Check out "<a href="/api/tours">/api/tours</a>"!'))
 
 const port = process.env.PORT || 3000
 app.listen(port, () => console.log( `\nnavigate to http://localhost:${port}/api/tours\n`))

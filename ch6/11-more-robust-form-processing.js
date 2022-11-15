@@ -43,3 +43,6 @@ app.post('/process-contact', (req, res) => {
 //the following is needed to use views 
 app.engine('handlebars', expressHandlebars({ defaultLayout: 'main' }))
 app.set('view engine', 'handlebars')
+
+const port = process.env.POST || 3000
+app.listen(port, () => console.log(`\nnavigate to http://localhost:${port}/text\n`))

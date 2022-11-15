@@ -1,5 +1,5 @@
 const express = require('express')
-const expressHandlebars = require('express-handlebars')
+const expressHandlebars = require('express-handlebars').engine
 const cookiesParser = require('cookie-parser')
 const session = require('express-session')
 const catNames = require('cat-names')
@@ -34,4 +34,4 @@ app.get('/set-random-username', (req, res) => {
 app.get('*', (req, res) => res.send('Check out our <a href="/greeting">greeting</a> page!'))
 
 const port = process.env.POST || 3000
-app.listen(port, () => console.log (`\nnavigate to http://localhos:${port}/greeting\n`))
+app.listen(port, () => console.log (`\nnavigate to http://localhost:${port}/greeting\n`))
