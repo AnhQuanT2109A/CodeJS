@@ -1,7 +1,26 @@
+const express = require('express')
+const expressHandlebars = require('express-handlebars').engine
+const app = express()
+const bodyParser = require('body-parser')
+
+//the following to use views 
+app.engine('handlebars', expressHandlebars({ defaultLayout: 'main' }))
+app.set('view engine ', 'handlebars')
+
+//this is foolowing to use views
+app.use(bodyParser.urlencoded({ extended: false }))
+app.use(bodyParser.json())
+
+app.get('/thank-you', (req, res) => res.render('11-thank-you'))
+app.get('/contact-error', (req, res) => res.render('11-contact-error'))
+
+//see the views/10-home.hns file for the contents od this view
+
 app.post('/process-contact', (req, res) => {
     try {
-        error
-        if (req.body.simulateError) throw new Error("error saving contact!")
+        // here's where we would try to save contact to databaseor other
+        // persistence mechanism...for now, we'll just simulate anerror
+        if (req.body.simulateError) throw new Error("error savingcontact!")
         console.log(`contact from ${req.body.name}
    <${req.body.email}>`)
         res.format({
@@ -9,7 +28,7 @@ app.post('/process-contact', (req, res) => {
             'application/json': () => res.json({ success: true }),
         })
     } catch (err) {
-
+        // here's where we would handle any persistence failures
         console.error(`error processing contact from
    ${req.body.name} ` +
             `<${req.body.email}>`)
@@ -21,3 +40,6 @@ app.post('/process-contact', (req, res) => {
         })
     }
 })
+//the following is needed to use views 
+app.engine('handlebars', expressHandlebars({ defaultLayout: 'main' }))
+app.set('view engine', 'handlebars')
