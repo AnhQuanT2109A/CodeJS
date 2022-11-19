@@ -29,8 +29,8 @@ const server = http.createServer((req, res) => {
             serveStaticFile(res, '/public/about.html',
                 'text/html')
             break
-        case '/img/logo1.png':
-            serveStaticFile(res, '/public/img/logo1.png',
+        case '/img/logo.png':
+            serveStaticFile(res, '/public/img/logo.png',
                 'image/png')
             break
         default:
@@ -39,6 +39,7 @@ const server = http.createServer((req, res) => {
             break
     }
 })
-server.listen(port, () => console.log(`server started on
-port ${port}; ` +
-    'press Ctrl-C to terminate....'))
+
+server.listen(port, () => console.log(
+        `Express started on http://localhost:${port}; ` +
+        `press Ctrl-C to terminate.`))
