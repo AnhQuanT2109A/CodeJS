@@ -25,8 +25,6 @@
             <label for="price">Price:</label>
             <input type="text" id="price" name="price">
             <br><br>
-            <label for="quantity">Quantity:</label>
-            <input type="text" id="quantity" name="quantity">
             <br><br>
             <input type="submit" value="Create">
             <a href="products" class="button">Cancel</a>
@@ -42,9 +40,7 @@
             <label for="price2">Price:</label>
             <input type="text" id="price2" name="price" value="${product.price}">
             <br><br>
-            <label for="quantity2">Quantity:</label>
-            <input type="text" id="quantity2" name="quantity" value="${product.quantity}">
-            <br><br>
+
 
             <input type="submit" value="Update">
             <a href="products" class="button">Cancel</a>
