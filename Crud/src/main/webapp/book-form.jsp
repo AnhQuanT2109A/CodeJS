@@ -13,6 +13,7 @@
 </head>
 <body>
     <h1>Book form</h1>
+
     <c:choose>
         <c:when test="${empty book.id}">
             <form action="books?action=create" method="POST">
@@ -33,6 +34,7 @@
             </form>
         </c:when>
 
+        
         <c:otherwise>
             <form action="books?action=update" method="POST">
                 <input type="hidden" name="id" value="${book.id}">

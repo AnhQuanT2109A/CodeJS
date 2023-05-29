@@ -14,6 +14,12 @@
 <body>
     <h1>Book list</h1>
     <a href="books?action=new">Add new Book</a>
+    <form action="books" method="GET">
+        <input type="hidden" name="action" value="search">
+        <input type="text" name="searchTerm" placeholder="Tìm kiếm theo tên sáchhh">
+        <button type="submit">Tìm kiếm</button>
+    </form>
+
 <table border="1">
     <tr>
         <td>ID</td>

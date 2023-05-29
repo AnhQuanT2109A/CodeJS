@@ -26,6 +26,7 @@ public class BookServlet extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String action = request.getParameter("action");
+
         if(action == null) {
             action = "list";
         }
@@ -45,6 +46,13 @@ public class BookServlet extends HttpServlet {
                 break;
             case "delete":
                 deleteBook(request, response);
+                break;
+            case "search":
+                String searchTerm = request.getParameter("searchTerm");
+                List<Book> searchResults = searchBooksByName(searchTerm);
+                request.setAttribute("bookList", searchResults);
+                RequestDispatcher dispatcher = request.getRequestDispatcher("book-list.jsp");
+                dispatcher.forward(request, response);
                 break;
             default:
                 listBooks(request, response);
@@ -74,9 +82,8 @@ public class BookServlet extends HttpServlet {
         bookList.add(newBook);
 
         response.sendRedirect("books");
-
-
     }
+
     private void showEditForm(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         int id = Integer.parseInt(request.getParameter("id"));
         Book book = getBookById(id);
@@ -84,6 +91,15 @@ public class BookServlet extends HttpServlet {
         request.setAttribute("book", book);
         RequestDispatcher dispatcher = request.getRequestDispatcher("book-form.jsp");
         dispatcher.forward(request, response);
+    }
+    private List<Book> searchBooksByName(String searchTerm) {
+        List<Book> searchResults = new ArrayList<>();
+        for (Book book : bookList) {
+            if (book.getNameBook().toLowerCase().contains(searchTerm.toLowerCase())) {
+                searchResults.add(book);
+            }
+        }
+        return searchResults;
     }
     private void updateBook(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         int id = Integer.parseInt(request.getParameter("id"));
@@ -100,12 +116,14 @@ public class BookServlet extends HttpServlet {
 
         response.sendRedirect("books");
     }
+
     private void deleteBook(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         int id = Integer.parseInt(request.getParameter("id"));
         Book book = getBookById(id);
         bookList.remove(book);
         response.sendRedirect("books");
     }
+
     private Book getBookById(int id) {
         for (Book book : bookList) {
             if(book.getId() == id) {
@@ -114,6 +132,5 @@ public class BookServlet extends HttpServlet {
         }
         return null;
     }
-
 
 }
