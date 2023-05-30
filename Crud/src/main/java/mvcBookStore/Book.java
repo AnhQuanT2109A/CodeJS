@@ -6,14 +6,16 @@ public class Book {
     private String nameAuthor;
     private double price;
     private int quantity;
+    private String imageUrl;
 
-    public Book(int id, String nameBook, String nameAuthor, double price, int quantity) {
+    public Book(int id, String nameBook, String nameAuthor, double price, int quantity, String imageUrl) {
         super();
         this.id = id;
         this.nameBook = nameBook;
         this.nameAuthor = nameAuthor;
         this.price = price;
         this.quantity = quantity;
+        this.imageUrl = imageUrl;
     }
 
     public int getId() {
@@ -54,6 +56,14 @@ public class Book {
 
     public double getPrice() {
         return price;
+    }
+
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
+    }
+
+    public String getImageUrl() {
+        return imageUrl;
     }
 }
 

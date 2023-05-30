@@ -10,13 +10,59 @@
 <html>
 <head>
     <title>Title</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        form {
+            width: 300px;
+            margin-top: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"] {
+            width: 100px;
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+
+        input[type="submit"],
+        a.button {
+            display: inline-block;
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 8px 16px;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        input[type="submit"]:hover,
+        a.button:hover {
+            background-color: #45a049;
+        }
+
+        a.button {
+            margin-left: 5px;
+        }
+    </style>
 </head>
 <body>
     <h1>Book form</h1>
 
     <c:choose>
         <c:when test="${empty book.id}">
-            <form action="books?action=create" method="POST">
+            <form action="books?action=create" method="POST" enctype="multipart/form-data">
                 <label for="nameBook">Name Book:</label>
                 <input type="text" id="nameBook" name="nameBook">
                 <br><br>
@@ -29,6 +75,10 @@
                 <label for="quantity">Quantity:</label>
                 <input type="text" id="quantity" name="quantity">
                 <br><br>
+
+                <label for="image">Image:</label>
+                <input type="file" id="image" name="image">
+                <br><br>
                 <input type="submit" value="Create">
                 <a href="books" class="button">Cancel</a>
             </form>
@@ -36,7 +86,7 @@
 
         
         <c:otherwise>
-            <form action="books?action=update" method="POST">
+            <form action="books?action=update" method="POST" enctype="multipart/form-data">
                 <input type="hidden" name="id" value="${book.id}">
                 <label for="nameBook">Name Book:</label>
                 <input type="text" id="nameBook" name="nameBook" value="${book.nameBook}">
@@ -49,6 +99,11 @@
                 <br><br>
                 <label for="quantity">Quantity:</label>
                 <input type="text" id="quantity" name="quantity" value="${book.quantity}">
+
+                <br><br>
+                <label for="image">Image:</label>
+                <input type="file" id="image" name="image">
+                <br><br>
 
                 <input type="submit" value="Update">
                 <a href="books">Cancel</a>
