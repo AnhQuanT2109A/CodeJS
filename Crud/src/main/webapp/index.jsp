@@ -8,10 +8,6 @@
 <h1><%= "Hello World!" %>
 </h1>
 <br/>
-<a href="hello-servlet">Hello Servlet</a>
-<br><br>
-<a href="products">Dang Ki</a>
-<br><br>
-<a href="books">Tao Sach</a>
+<a href="students">Tao Hoc Sinh</a>
 </body>
 </html>

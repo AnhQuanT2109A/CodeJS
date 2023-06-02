@@ -65,13 +65,10 @@
             <form action="books?action=create" method="POST" enctype="multipart/form-data">
                 <label for="nameBook">Name Book:</label>
                 <input type="text" id="nameBook" name="nameBook">
-                <br><br>
                 <label for="nameAuthor">Name Author:</label>
                 <input type="text" id="nameAuthor" name="nameAuthor">
-                <br><br>
                 <label for="price">Price: </label>
                 <input type="text" id="price" name="price">
-                <br><br>
                 <label for="quantity">Quantity:</label>
                 <input type="text" id="quantity" name="quantity">
                 <br><br>
