@@ -10,7 +10,7 @@
 <html>
 <head>
     <title>Title</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="./css/CSS_Books/style.css">
 </head>
 <body>
     <h1>Book list</h1>
