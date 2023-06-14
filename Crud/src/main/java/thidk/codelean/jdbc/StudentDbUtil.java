@@ -38,8 +38,9 @@ public class StudentDbUtil {
                 String firstName = myRs.getString("first_name");
                 String lastName = myRs.getString("last_Name");
                 String email = myRs.getString("email");
+                String img = myRs.getString("img");
 
-                Student tempStudent = new Student(id, firstName, lastName, email);
+                Student tempStudent = new Student(id, firstName, lastName, email, img);
 
                 students.add(tempStudent);
             }
@@ -102,7 +103,7 @@ public class StudentDbUtil {
         ResultSet myRs = null;
         int studentId;
 
-        try{
+        try {
             studentId = Integer.parseInt(theStudentId);
 
             String url = "jdbc:mysql://localhost:3306/web_student_tracker";
@@ -119,17 +120,18 @@ public class StudentDbUtil {
 
             myRs = myStmt.executeQuery();
 
-            if (myRs.next()){
+            Student tempStudent = null;
+            if (myRs.next()) {
                 String firstName = myRs.getString("first_name");
                 String lastName = myRs.getString("last_name");
                 String email = myRs.getString("email");
+                String img = myRs.getString("img");
 
-                theStudent = new Student(studentId, firstName, lastName, email);
-            }
-            else {
+                tempStudent = new Student(studentId, firstName, lastName, email, img);
+            }else {
                 throw new Exception("Could not find student id: " + studentId);
             }
-            return theStudent;
+            return tempStudent;
         }
         finally {
             close(myConn, myStmt, myRs);
@@ -147,7 +149,7 @@ public class StudentDbUtil {
             Class.forName("com.mysql.jdbc.Driver");
             myConn = DriverManager.getConnection(url, username, password);
 
-            String sql = "update student " + "set first_name=?, last_name=?, email=?" + "where id=?";
+            String sql = "update student " + "set first_name=?, last_name=?, email=?, img=?" + "where id=?";
 
             myStmt = myConn.prepareStatement(sql);
 
@@ -155,6 +157,7 @@ public class StudentDbUtil {
             myStmt.setString(2, theStudent.getLastName());
             myStmt.setString(3, theStudent.getEmail());
             myStmt.setInt(4, theStudent.getId());
+            myStmt.setString(4, theStudent.getImg());
 
             myStmt.execute();
         }

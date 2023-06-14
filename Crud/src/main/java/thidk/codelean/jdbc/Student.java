@@ -5,19 +5,22 @@ public class Student {
     private String firstName;
     private String lastName;
     private String email;
-
-    public Student(String firstName, String lastName, String email){
+    private String img;
+    public Student(String firstName, String lastName, String email, String img){
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
+        this.img = img;
     }
 
-    public Student(int id ,String firstName, String lastName, String email){
+    public Student(int id ,String firstName, String lastName, String email, String img){
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
+        this.img = img;
     }
+
 
     public int getId() {
         return id;
@@ -51,8 +54,16 @@ public class Student {
         this.email = email;
     }
 
+    public String getImg() {
+        return img;
+    }
+
+    public void setImg(String img) {
+        this.img = img;
+    }
+
     @Override
     public String toString() {
-        return "Student [Id= " + id + ", First name= " + firstName + ", Last name= " + lastName + ", Email= " + email + "]";
+        return "Student [Id= " + id + ", First name= " + firstName + ", Last name= " + lastName + ", Email= " + email +  "]";
     }
 }

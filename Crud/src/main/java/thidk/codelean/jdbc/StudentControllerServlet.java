@@ -82,8 +82,9 @@ public class StudentControllerServlet extends HttpServlet {
         String firstName = request.getParameter("firstName");
         String lastName = request.getParameter("lastName");
         String email = request.getParameter("email");
+        String img = request.getParameter("img");
 
-        Student theStudent = new Student(id, firstName, lastName, email);
+        Student theStudent = new Student(id, firstName, lastName, email, img);
 
         studentDbUtil.updateStudent(theStudent);
         listStudents(request, response);
@@ -104,8 +105,9 @@ public class StudentControllerServlet extends HttpServlet {
         String firstName = request.getParameter("firstName");
         String lastName = request.getParameter("lastName");
         String email = request.getParameter("email");
+        String img = request.getParameter("img");
 
-        Student theStudent = new Student(firstName, lastName, email);
+        Student theStudent = new Student(firstName, lastName, email, img);
 
         studentDbUtil.addStudent(theStudent);
 

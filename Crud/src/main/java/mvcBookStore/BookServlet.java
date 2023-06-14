@@ -25,7 +25,7 @@ public class BookServlet extends HttpServlet {
     public void init() throws ServletException {
         super.init();
         bookList = new ArrayList<>();
-        bookList.add(new Book(1, "Dế mèn phiêu lưu kí", "Tô Hoài",48000, 20, "images/a.jpg" ));
+        bookList.add(new Book(1, "Dế mèn phiêu lưu kí", "Tô Hoài",48000, 20, "/Book/images/a.jpg" ));
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -55,7 +55,7 @@ public class BookServlet extends HttpServlet {
                 String searchTerm = request.getParameter("searchTerm");
                 List<Book> searchResults = searchBooksByName(searchTerm);
                 request.setAttribute("bookList", searchResults);
-                RequestDispatcher dispatcher = request.getRequestDispatcher("book-list.jsp");
+                RequestDispatcher dispatcher = request.getRequestDispatcher("/Book/book-list.jsp");
                 dispatcher.forward(request, response);
                 break;
             default:
@@ -68,11 +68,11 @@ public class BookServlet extends HttpServlet {
     }
     private void listBooks(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.setAttribute("bookList", bookList);
-        RequestDispatcher dispatcher = request.getRequestDispatcher("book-list.jsp");
+        RequestDispatcher dispatcher = request.getRequestDispatcher("/Book/book-list.jsp");
         dispatcher.forward(request, response);
     }
     private void showNewForm(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        RequestDispatcher dispatcher = request.getRequestDispatcher("book-form.jsp");
+        RequestDispatcher dispatcher = request.getRequestDispatcher("/Book/book-form.jsp");
         dispatcher.forward(request, response);
     }
     private void createBook(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -84,7 +84,7 @@ public class BookServlet extends HttpServlet {
 
         Part filePart = request.getPart("image");
         String fileName = getFileName(filePart);
-        String uploadDirectory = getServletContext().getRealPath("/images");
+        String uploadDirectory = getServletContext().getRealPath("/Book/images");
         String filePath = uploadFile(filePart, fileName, uploadDirectory);
         String fileURL = "images/" + fileName;
 
@@ -99,7 +99,7 @@ public class BookServlet extends HttpServlet {
         Book book = getBookById(id);
 
         request.setAttribute("book", book);
-        RequestDispatcher dispatcher = request.getRequestDispatcher("book-form.jsp");
+        RequestDispatcher dispatcher = request.getRequestDispatcher("/Book/book-form.jsp");
         dispatcher.forward(request, response);
     }
     private List<Book> searchBooksByName(String searchTerm) {
@@ -113,7 +113,7 @@ public class BookServlet extends HttpServlet {
     }
 
     private void deleteImage(String imageUrl, HttpServletRequest request) {
-        String uploadDirectory = request.getServletContext().getRealPath("") + File.separator + "images";
+        String uploadDirectory = request.getServletContext().getRealPath("") + File.separator + "/Book/images";
         String imagePath = uploadDirectory + File.separator + imageUrl;
 
         File imageFile = new File(imagePath);
@@ -141,9 +141,10 @@ public class BookServlet extends HttpServlet {
             deleteImage(book.getImageUrl(), request);
 
             String fileName = getFileName(filePart);
-            String uploadDirectory = getServletContext().getRealPath("/images");
+            String uploadDirectory = getServletContext().getRealPath("/Book/images");
             String filePath = uploadFile(filePart, fileName, uploadDirectory);
-            String fileURL = "images/" + fileName;
+            String fileURL = "./" +
+                    "ook/images/" + fileName;
         }
 
         response.sendRedirect("books");

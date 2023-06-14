@@ -19,6 +19,7 @@
 
         <table>
             <tr>
+                <th>Student Img</th>
                 <th>First Name</th>
                 <th>Last Name</th>
                 <th>Email</th>
@@ -34,6 +35,7 @@
                     <c:param name="studentId" value="${tempStudent.id}"/>
                 </c:url>
                 <tr>
+                    <td><img src="images/${tempStudent.img}" alt="" id="student_img"></td>
                     <td>${tempStudent.firstName}</td>
                     <td>${tempStudent.lastName}</td>
                     <td>${tempStudent.email}</td>
