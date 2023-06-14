@@ -69,7 +69,7 @@
                 Class.forName("com.mysql.jdbc.Driver");
                 myConn = DriverManager.getConnection(url, username, password);
 
-                String sql = "SELECT r.roomId, r.roomType, r.price, r.availability, r.detail " +
+                String sql = "SELECT r.room_id, r.room_type, r.price, r.availability, r.detail " +
                         "FROM rooms r " +
                         "INNER JOIN hotels h ON r.hotel_id = h.hotel_id " +
                         "WHERE h.hotel_id = ?";
@@ -81,12 +81,12 @@
 
                 while (myRs.next()) {
                     int room_id = myRs.getInt("room_id");
-                    String roomType = myRs.getString("room_type");
+                    String room_type = myRs.getString("room_type");
                     double price = myRs.getDouble("price");
                     boolean availability = myRs.getBoolean("availability");
                     String detail = myRs.getString("detail");
 
-                    rooms tempRoom = new rooms(room_id,hotelId, roomType, price, availability, detail);
+                    rooms tempRoom = new rooms(room_id,hotelId, room_type, price, availability, detail);
                     rooms.add(tempRoom);
                 }
                 return rooms;
@@ -327,13 +327,13 @@
 
                 List<rooms> roomsList = new ArrayList<>();
                 while (roomsRs.next()) {
-                    int roomId = roomsRs.getInt("roomId");
-                    String roomType = roomsRs.getString("roomType");
+                    int room_id = roomsRs.getInt("room_id");
+                    String room_type = roomsRs.getString("room_type");
                     double price = roomsRs.getDouble("price");
                     boolean availability = roomsRs.getBoolean("availability");
                     String detail = roomsRs.getString("detail");
 
-                    rooms room = new rooms(roomId, hotelId, roomType, price, availability, detail);
+                    rooms room = new rooms(room_id, hotelId, room_type, price, availability, detail);
                     roomsList.add(room);
                 }
 

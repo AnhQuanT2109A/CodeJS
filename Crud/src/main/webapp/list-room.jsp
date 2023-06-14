@@ -24,6 +24,7 @@
 <div id="container">
     <div id="content">
         <input type="button" value="Add Room" onclick="window.location.href='add-room-form.jsp'; return false;" class="add-room-button" />
+        <a href="hotelsControllerServlet">Cancel</a>
         <table>
             <tr>
                 <th>Room ID</th>
@@ -32,13 +33,13 @@
                 <th>Availability</th>
                 <th>Detail</th>
             </tr>
-            <c:forEach var="room" items="${ROOM_LIST}">
+            <c:forEach var="tempRoom" items="${ROOM_LIST}">
                 <tr>
-                    <td>${room.roomId}</td>
-                    <td>${room.roomType}</td>
-                    <td>${room.price}</td>
-                    <td>${room.availability}</td>
-                    <td>${room.detail}</td>
+                    <td>${tempRoom.room_id}</td>
+                    <td>${tempRoom.room_type}</td>
+                    <td>${tempRoom.price}</td>
+                    <td>${tempRoom.availability}</td>
+                    <td>${tempRoom.detail}</td>
                 </tr>
             </c:forEach>
         </table>

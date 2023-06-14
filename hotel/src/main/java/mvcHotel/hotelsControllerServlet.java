@@ -6,9 +6,8 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import thidk.codelean.jdbc.Student;
 
-import javax.annotation.Resource;
+
 import javax.sql.DataSource;
 import java.io.IOException;
 import java.util.List;
@@ -19,7 +18,6 @@ public class hotelsControllerServlet extends HttpServlet {
 
     private hotelsDbUtil hotelsDbUtil;
 
-    @Resource(name="jdbc/web_hotels_tracker")
     private DataSource dataSource;
 
     @Override
