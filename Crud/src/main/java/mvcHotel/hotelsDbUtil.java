@@ -346,4 +346,101 @@
             }
         }
 
+
+        public String getPhone(int userId) throws Exception {
+            String phone = null;
+
+            Connection connection = null;
+            PreparedStatement statement = null;
+            ResultSet resultSet = null;
+
+            try {
+                String url = "jdbc:mysql://localhost:3306/web_hotels_tracker";
+                String username = "root";
+                String password = "";
+                Class.forName("com.mysql.jdbc.Driver");
+
+                connection = DriverManager.getConnection(url, username, password);
+
+                String sql = "SELECT phone FROM users WHERE user_id = ?";
+                statement = connection.prepareStatement(sql);
+                statement.setInt(1, userId);
+
+                resultSet = statement.executeQuery();
+
+                if (resultSet.next()) {
+                    phone = resultSet.getString("phone");
+                }
+            } finally {
+                close(connection, statement, resultSet);
+            }
+
+            return phone;
+        }
+
+        public String getEmail(int userId) throws Exception {
+            String email = null;
+
+            Connection connection = null;
+            PreparedStatement statement = null;
+            ResultSet resultSet = null;
+
+            try {
+                String url = "jdbc:mysql://localhost:3306/web_hotels_tracker";
+                String username = "root";
+                String password = "";
+                Class.forName("com.mysql.jdbc.Driver");
+
+                connection = DriverManager.getConnection(url, username, password);
+
+                String sql = "SELECT email FROM users WHERE user_id = ?";
+                statement = connection.prepareStatement(sql);
+                statement.setInt(1, userId);
+
+                resultSet = statement.executeQuery();
+
+                if (resultSet.next()) {
+                    email = resultSet.getString("email");
+                }
+            } finally {
+                close(connection, statement, resultSet);
+            }
+
+            return email;
+        }
+
+        public int authenticateUser(String username, String password) throws SQLException {
+            int userId = -1;
+            Connection connection = null;
+            PreparedStatement statement = null;
+            ResultSet resultSet = null;
+
+            try {
+                String url = "jdbc:mysql://localhost:3306/web_hotels_tracker";
+                String us = "root";
+                String up = "";
+                Class.forName("com.mysql.jdbc.Driver");
+
+                connection = DriverManager.getConnection(url, us, up);
+                String sql = "SELECT user_id FROM users WHERE username = ? AND password = ?";
+                statement = connection.prepareStatement(sql);
+                statement.setString(1, username);
+                statement.setString(2, password);
+
+                resultSet = statement.executeQuery();
+
+                if (resultSet.next()) {
+                    userId = resultSet.getInt("user_id");
+                }
+            } catch (ClassNotFoundException e) {
+                throw new RuntimeException(e);
+            } finally {
+                // Đảm bảo đóng tất cả các kết nối và tài nguyên
+                close(connection, statement, resultSet);
+            }
+
+            return userId;
+        }
+
+
     }

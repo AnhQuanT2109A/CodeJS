@@ -6,12 +6,15 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
 import thidk.codelean.jdbc.Student;
 
 import javax.annotation.Resource;
 import javax.sql.DataSource;
 import java.io.IOException;
 import java.util.List;
+
+import static java.lang.System.out;
 
 @WebServlet("/hotelsControllerServlet")
 public class hotelsControllerServlet extends HttpServlet {
@@ -69,6 +72,9 @@ public class hotelsControllerServlet extends HttpServlet {
                 case "ROOMS":
                     listRooms(request, response);
                     break;
+                case "LOGIN":
+                    login(request, response);
+                    break;
                 default:
                     listHotel(request, response);
             }
@@ -76,6 +82,10 @@ public class hotelsControllerServlet extends HttpServlet {
         catch (Exception exc){
             throw new ServletException(exc);
         }
+    }
+
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        doGet(request, response);
     }
 
     private void listHotel(HttpServletRequest request, HttpServletResponse response) throws Exception {
@@ -155,6 +165,29 @@ public class hotelsControllerServlet extends HttpServlet {
 
         RequestDispatcher dispatcher = request.getRequestDispatcher("list-room.jsp");
         dispatcher.forward(request, response);
+    }
+
+    private void login(HttpServletRequest request, HttpServletResponse response) throws Exception {
+        String username = request.getParameter("username");
+        String password = request.getParameter("password");
+
+        // Kiểm tra thông tin đăng nhập từ cơ sở dữ liệu
+        int userId = hotelsDbUtil.authenticateUser(username, password);
+
+        if (userId != -1) {
+            // Lưu user_id vào session
+            HttpSession session = request.getSession();
+            session.setAttribute("userId", String.valueOf(userId));
+
+            out.println("userID : " + userId);
+
+
+            // Tiến hành các hành động tiếp theo
+            response.sendRedirect(request.getContextPath() + "/hotelsControllerServlet");
+        } else {
+            out.println("bú");
+
+        }
     }
 
 }

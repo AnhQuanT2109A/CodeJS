@@ -33,6 +33,9 @@
     <link href="css/style.css" rel="stylesheet">
 </head>
 
-<body>  </body>
+<body>
+<a href="login.jsp">Login</a>
+<a href="list-reservations.jsp">booking</a>
+</body>
 
 </html>

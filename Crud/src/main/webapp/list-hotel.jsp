@@ -9,6 +9,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <title>My Hotel</title>
     <script type="text/javascript">
         function searchHotels() {
@@ -46,12 +47,14 @@
 <body>
 <div id="wrapper">
     <header id="header">
-        <h1>CodeLean Academy</h1>
+        <h1>CodeLean Quan</h1>
     </header>
 </div>
 
 
 <body>
+
+
 <div id="container">
     <div id="content">
         <input type="button" value="Add Hotel" onclick="window.location.href='add-hotel-form.jsp'; return false;" class="add-hotel-button" />
