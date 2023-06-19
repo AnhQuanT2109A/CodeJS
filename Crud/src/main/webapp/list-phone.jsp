@@ -11,6 +11,37 @@
 <html>
 <head>
     <title>Title</title>
+    <style>
+        /* CSS cho bảng */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        /* CSS cho nút "Add Phone" */
+        .add-phone-button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 14px;
+            margin: 10px 0;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
 <div id="container">
