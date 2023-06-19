@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="66fff9fb-1638-427d-bf57-6077d44e314f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Crud/src/main/java/mvcHotel/hotels.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Crud/src/main/java/mvcHotel/hotelsControllerServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Crud/src/main/java/mvcHotel/hotelsDbUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Crud/src/main/java/mvcHotel/reservations.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Crud/src/main/java/mvcHotel/rooms.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Crud/src/main/java/mvcHotel/users.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Crud/src/main/java/thidk/codelean/jdbc/Student.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Crud/src/main/java/thidk/codelean/jdbc/StudentControllerServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Crud/src/main/java/thidk/codelean/jdbc/StudentDbUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Crud/src/main/java/thidk/codelean/jdbc/TestServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Crud/src/main/webapp/WEB-INF/lib/animate/animate.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Crud/src/main/webapp/WEB-INF/lib/animate/animate.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Crud/src/main/webapp/WEB-INF/lib/counterup/counterup.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Crud/src/main/webapp/WEB-INF/lib/easing/easing.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Crud/src/main/webapp/WEB-INF/lib/easing/easing.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Crud/src/main/webapp/WEB-INF/lib/owlcarousel/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Crud/src/main/webapp/WEB-INF/lib/owlcarousel/assets/ajax-loader.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Crud/src/main/webapp/WEB-INF/lib/owlcarousel/assets/owl.carousel.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Crud/src/main/webapp/WEB-INF/lib/owlcarousel/assets/owl.carousel.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Crud/src/main/webapp/WEB-INF/lib/owlcarousel/assets/owl.theme.default.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Crud/src/main/webapp/WEB-INF/lib/owlcarousel/assets/owl.theme.default.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Crud/src/main/webapp/WEB-INF/lib/owlcarousel/assets/owl.theme.green.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Crud/src/main/webapp/WEB-INF/lib/owlcarousel/assets/owl.theme.green.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Crud/src/main/webapp/WEB-INF/lib/owlcarousel/assets/owl.video.play.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Crud/src/main/webapp/WEB-INF/lib/owlcarousel/owl.carousel.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Crud/src/main/webapp/WEB-INF/lib/owlcarousel/owl.carousel.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Crud/src/main/webapp/WEB-INF/lib/tempusdominus/css/tempusdominus-bootstrap-4.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Crud/src/main/webapp/WEB-INF/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Crud/src/main/webapp/WEB-INF/lib/tempusdominus/js/moment-timezone.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Crud/src/main/webapp/WEB-INF/lib/tempusdominus/js/moment.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Crud/src/main/webapp/WEB-INF/lib/tempusdominus/js/tempusdominus-bootstrap-4.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Crud/src/main/webapp/WEB-INF/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Crud/src/main/webapp/WEB-INF/lib/waypoints/links.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Crud/src/main/webapp/WEB-INF/lib/waypoints/waypoints.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Crud/src/main/webapp/WEB-INF/lib/wow/wow.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Crud/src/main/webapp/WEB-INF/lib/wow/wow.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Crud/src/main/webapp/add-hotel-form.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Crud/src/main/webapp/lib/animate/animate.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Crud/src/main/webapp/lib/animate/animate.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Crud/src/main/webapp/lib/counterup/counterup.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Crud/src/main/webapp/lib/easing/easing.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Crud/src/main/webapp/lib/easing/easing.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Crud/src/main/webapp/lib/jakarta.servlet.jsp.jstl-2.0.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Crud/src/main/webapp/lib/jakarta.servlet.jsp.jstl-api-2.0.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Crud/src/main/webapp/lib/mysql-connector-java-8.0.19.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Crud/src/main/webapp/lib/owlcarousel/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Crud/src/main/webapp/lib/owlcarousel/assets/ajax-loader.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Crud/src/main/webapp/lib/owlcarousel/assets/owl.carousel.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Crud/src/main/webapp/lib/owlcarousel/assets/owl.carousel.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Crud/src/main/webapp/lib/owlcarousel/assets/owl.theme.default.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Crud/src/main/webapp/lib/owlcarousel/assets/owl.theme.default.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Crud/src/main/webapp/lib/owlcarousel/assets/owl.theme.green.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Crud/src/main/webapp/lib/owlcarousel/assets/owl.theme.green.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Crud/src/main/webapp/lib/owlcarousel/assets/owl.video.play.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Crud/src/main/webapp/lib/owlcarousel/owl.carousel.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Crud/src/main/webapp/lib/owlcarousel/owl.carousel.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Crud/src/main/webapp/lib/tempusdominus/css/tempusdominus-bootstrap-4.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Crud/src/main/webapp/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Crud/src/main/webapp/lib/tempusdominus/js/moment-timezone.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Crud/src/main/webapp/lib/tempusdominus/js/moment.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Crud/src/main/webapp/lib/tempusdominus/js/tempusdominus-bootstrap-4.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Crud/src/main/webapp/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Crud/src/main/webapp/lib/waypoints/links.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Crud/src/main/webapp/lib/waypoints/waypoints.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Crud/src/main/webapp/lib/wow/wow.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Crud/src/main/webapp/lib/wow/wow.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Crud/src/main/webapp/list-hotel.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Crud/src/main/webapp/list-reservations.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Crud/src/main/webapp/list-room.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Crud/src/main/webapp/login.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Crud/src/main/webapp/update-hotel-form.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Crud/.idea/webContexts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Crud/.idea/webContexts.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Crud/src/main/java/mvcBookStore/Book.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Crud/src/main/java/mvcBookStore/BookServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Crud/src/main/java/mvcStudent/Student.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Crud/src/main/java/mvcStudent/StudentServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Crud/src/main/java/testSql/TestServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Crud/src/main/webapp/book-form.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Crud/src/main/webapp/book-list.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Crud/src/main/webapp/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/Crud/src/main/webapp/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Crud/src/main/webapp/images/a.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Crud/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/Crud/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Crud/src/main/webapp/search.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Crud/src/main/webapp/student-form.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Crud/src/main/webapp/student-list.jsp" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="2RPkHEE43pvLFFK1bDQ1LFlpryN" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/CodeJS",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="66fff9fb-1638-427d-bf57-6077d44e314f" name="Changes" comment="" />
+      <created>1687159013877</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1687159013877</updated>
+      <workItem from="1687159014921" duration="59000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

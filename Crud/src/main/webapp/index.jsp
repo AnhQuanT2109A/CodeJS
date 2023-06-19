@@ -34,8 +34,8 @@
 </head>
 
 <body>
-<a href="login.jsp">Login</a>
-<a href="list-reservations.jsp">booking</a>
+
+<a href="phoneControllerServlet">phone</a>
 </body>
 
 </html>
